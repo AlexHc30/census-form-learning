@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recensamant</title>
+</head>
+<body>
+
+<form id="census">
+    <div>
+    <label for="firstname">First Name</label>
+    <input type="text" id="firstname" onkeyup="displayName()" onchange="invalidName(nameInput)"/>
+    </div>
+    <div>
+    <label for="lastname">Last Name</label>
+    <input type="text" id="lastname" onchange="invalidName(lastNameInput)"/>
+    </div>
+    <div>
+    <label for="cnp">CNP</label>
+    <input type="number" id="cnp"/>
+    </div>
+
+    <p>Gender</p>
+    <label for="male">Male</label>
+    <input type="radio" id="male" name="gender" value="Male"/>
+    <label for="female">Female</label>
+    <input type="radio" id="female" name="gender" value="Female"/>
+    <label for="other">Other</label>
+    <input type="radio" id="other" name="gender" value="Other"/>
+
+    <div>
+        <label for="email">E-mail</label>
+        <input type="email" id="email"/>
+    </div>
+
+    <div>
+        <label for="phone">Phone Number</label>
+        <input type="number" id="phone"/>
+    </div>
+
+    <p>Education Level</p>
+    <label for="elementary">Elementary School</label>
+    <input type="checkbox" id="elementary" name="education" value="Elementary School"/>
+    <label for="primary">Primary School</label>
+    <input type="checkbox" id="primary" name="education" value="Primary School"/>
+    <label for="college">College</label>
+    <input type="checkbox" id="college" name="education" value="College"/>
+
+    <div>
+        <label for="mentions">Special Mentions</label>
+        <p>Here are some mentions about this subject</p>
+        <textarea id="mentions" placeholder="type some text"></textarea>
+    </div>
+    <button type="button" onclick="displayGender(); displayEducation(); displaySpecialMentions(); missingValues()">Submit</button>
+
+</form>
+<script src="index.js"></script>
+</body>
+</html>
