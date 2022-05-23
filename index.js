@@ -42,20 +42,26 @@ let emptyField = '';
 
 
 function missingValues() {
-  if ( nameInput.value == "" || lastNameInput.value == "" || cnp.value == "" ) {
-  //  console.log("error, missing values");
-    if (nameInput.value == "") {
-      emptyField = '<first name> ';
-    }
-    if (lastNameInput.value == "") {
-      emptyField += '<last name> ';
-    }
-    if (cnp.value == "") {
-      emptyField += '<CNP> ';
-    }
-    console.log(`Error, the following values are missing: ${emptyField}`);
+  if (nameInput.value == "") {
+    emptyField = '<first name> ';
+    nameInput.classList.add("errorInput");
   }
- emptyField = '';
+  if (lastNameInput.value == "") {
+    lastNameInput.classList.add("errorInput");
+    emptyField += '<last name> ';
+  }
+  if (cnp.value == "") {
+    cnp.classList.add("errorInput");
+    emptyField += '<CNP> ';
+  }
+  let error = document.querySelector("#mandatoryFieldsError");
+  if (emptyField) {
+    error.innerText = `Error, the following values are missing: ${emptyField}`;
+  } else {
+    error.innerText = "";
+    cnp.classList.remove("errorInput");
+  }
+  emptyField = '';
 }
 
 //4. Dupa ce ai scris numele sau prenumele si ai iesit din input (onchange), sa verifici ca textul scris sa nu contina cifre. Daca contine, "Eroare <camp>" in consola
