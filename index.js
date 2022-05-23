@@ -59,16 +59,31 @@ function missingValues() {
 }
 
 //4. Dupa ce ai scris numele sau prenumele si ai iesit din input (onchange), sa verifici ca textul scris sa nu contina cifre. Daca contine, "Eroare <camp>" in consola
-function invalidName(name) {
-  let nameVerify = String(name.value); //aici mi-a luat ceva sa-mi dau seama ca trebuie "name.value" si nu doar "name....
-  for (let i = 0; i < nameVerify.length; i++) {
-    if (!isNaN(nameVerify.charAt(i))) {
-      if (nameVerify === nameInput.value) {
-      console.log("Error! The first name you entered contains numbers.") } else if (nameVerify === lastNameInput.value) {
-        console.log("Error! The last name you entered contains numbers.")
-      }
+function invalidNames (name) {
+  if (/\d/.test(name.value)) {
+    if (name.value === nameInput.value) {
+      console.log(name.classList);
+      nameInput.classList.add("errorInput");
+      let error = document.getElementById("firstNameError");
+      error.innerText = "Error! The first name you entered contains numbers.";
     }
-  } 
+    if (name.value === lastNameInput.value) {
+      lastNameInput.classList.add("errorInput");
+      let error = document.getElementById("lastNameError");
+      error.innerText = "Error! The last name you entered contains numbers.";
+    }
+  } else {
+    if (name.value === nameInput.value) {
+      nameInput.classList.remove("errorInput");
+      let error = document.getElementById("firstNameError");
+      error.innerText = "";
+    }
+    if (name.value === lastNameInput.value) {
+      lastNameInput.classList.remove("errorInput");
+      let error = document.getElementById("lastNameError");
+      error.innerText = "";
+    }
+  }
 }
 
 function submitHandler() {
