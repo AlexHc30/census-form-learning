@@ -70,3 +70,10 @@ function invalidName(name) {
     }
   } 
 }
+
+function submitHandler() {
+  displayEducation();
+  displaySpecialMentions();
+  displayGender();
+  missingValues();
+}
