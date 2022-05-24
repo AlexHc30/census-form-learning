@@ -31,4 +31,13 @@
 
 .bodyContent {
     padding: 0 250px;
+    margin-bottom: 50px;
+}
+
+.navigationFooter {
+    list-style: none;
+    padding: 15px 0 0 180px;
+    display: flex;
+    gap: 50px;
+    height: 150px;
 }
