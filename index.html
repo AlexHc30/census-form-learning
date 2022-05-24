@@ -7,64 +7,75 @@
 </head>
 <body>
 
-<img src="img/stema.png" class="stema" alt="stema nationala a Romaniei">
-<h1>Recensamantul populatiei Romaniei</h1>
-<h2>2021</h2>
-<p>Scurta descriere</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-<p>Formularul</p>
-<form id="census">
-    <div>
-        <label for="firstname">First Name</label>
-        <input type="text" id="firstname" onkeyup="displayName()" onchange="invalidNames(nameInput)"/>
+<div class="bodyContent">
+    <div class="stema">
+        <img src="img/stema.png" class="stema img" alt="stema nationala a Romaniei">
+    </div>
+
+    <div class="header">
+    <h1>Recensamantul populatiei Romaniei</h1>
+    <h2>2021</h2>
+    </div>
+
+    <div class="description">
+        <p>Scurta descriere</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <p>Formularul</p>
+    <form id="census">
+        <div>
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" onkeyup="displayName()" onchange="invalidNames(nameInput)"/>
             <p class="errorMessage" id="firstNameError"></p>
         </div>
         <div>
-        <label for="lastname">Last Name</label>
-        <input type="text" id="lastname" onchange="invalidNames(lastNameInput)"/>
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" onchange="invalidNames(lastNameInput)"/>
             <p class="errorMessage" id="lastNameError"></p>
         </div>
         <div>
-        <label for="cnp">CNP</label>
-        <input type="number" id="cnp"/>
+            <label for="cnp">CNP</label>
+            <input type="number" id="cnp"/>
         </div>
         <p class="errorMessage" id="mandatoryFieldsError"></p>
 
-    <p>Gender</p>
-    <label for="male">Male</label>
-    <input type="radio" id="male" name="gender" value="Male"/>
-    <label for="female">Female</label>
-    <input type="radio" id="female" name="gender" value="Female"/>
-    <label for="other">Other</label>
-    <input type="radio" id="other" name="gender" value="Other"/>
+        <p>Gender</p>
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender" value="Male"/>
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender" value="Female"/>
+        <label for="other">Other</label>
+        <input type="radio" id="other" name="gender" value="Other"/>
 
-    <div>
-        <label for="email">E-mail</label>
-        <input type="email" id="email"/>
-    </div>
+        <div>
+            <label for="email">E-mail</label>
+            <input type="email" id="email"/>
+        </div>
 
-    <div>
-        <label for="phone">Phone Number</label>
-        <input type="number" id="phone"/>
-    </div>
+        <div>
+            <label for="phone">Phone Number</label>
+            <input type="number" id="phone"/>
+        </div>
 
-    <p>Education Level</p>
-    <label for="elementary">Elementary School</label>
-    <input type="checkbox" id="elementary" name="education" value="Elementary School"/>
-    <label for="primary">Primary School</label>
-    <input type="checkbox" id="primary" name="education" value="Primary School"/>
-    <label for="college">College</label>
-    <input type="checkbox" id="college" name="education" value="College"/>
+        <p>Education Level</p>
+        <label for="elementary">Elementary School</label>
+        <input type="checkbox" id="elementary" name="education" value="Elementary School"/>
+        <label for="primary">Primary School</label>
+        <input type="checkbox" id="primary" name="education" value="Primary School"/>
+        <label for="college">College</label>
+        <input type="checkbox" id="college" name="education" value="College"/>
 
-    <div>
-        <label for="mentions">Special Mentions</label>
-        <p>Here are some mentions about this subject</p>
-        <textarea id="mentions" placeholder="type some text"></textarea>
-    </div>
-    <button type="button" onclick='submitHandler()'>Submit</button>
+        <div>
+            <label for="mentions">Special Mentions</label>
+            <p>Here are some mentions about this subject</p>
+            <textarea id="mentions" placeholder="type some text"></textarea>
+        </div>
+        <button type="button" onclick='submitHandler()'>Submit</button>
 
-</form>
+    </form>
+</div>
 
 <ul>
     <li><a href="https://www.google.com/" target="_blank">FAQ</a></li>

@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .errorMessage {
     color: red;
 }
@@ -7,6 +12,23 @@
     color: red;
 }
 
+.stema.img {
+    height: 200px;
+    margin: 10px 0 20px 0;
+}
+
 .stema {
-    height: 300px;
+    text-align: center;
+}
+
+.header {
+    text-align: center;
+}
+
+.description {
+    margin: 35px 0 20px 0;
+}
+
+.bodyContent {
+    padding: 0 250px;
 }
