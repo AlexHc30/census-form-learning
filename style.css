@@ -32,6 +32,7 @@
 .bodyContent {
     padding: 0 250px;
     margin-bottom: 50px;
+    color: navy;
 }
 
 .navigationFooter {
@@ -40,4 +41,10 @@
     display: flex;
     gap: 50px;
     height: 150px;
+    background-color: navy;
+    box-sizing: border-box;
+}
+
+a {
+    color: white;
 }
