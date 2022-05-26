@@ -47,9 +47,20 @@
 
 a {
     color: white;
+    text-decoration: none;
 }
 
-@media screen and (max-width: 768px) {
+a:hover {
+    text-decoration: underline;
+  }
+
+  a:visited {
+    color: blue;
+  }
+
+/* from used directly max: 769 because links at bottom and padding
+looked bad from 480 to 769 */
+@media screen and (max-width: 769px) {
     body {
         padding: 60px;
     }
@@ -64,7 +75,22 @@ a {
         padding: 15px 0;
         display: flex;
         flex-direction: column;
-        align-items: center;
     }
 }
 
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+        padding: 160px;
+    }
+    .bodyContent {
+        padding: 0;
+    }
+    .img {
+        height: 150px;
+    }
+    .navigationFooter{
+        padding: 15px;
+    }
+}
