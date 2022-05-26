@@ -19,12 +19,12 @@
     </div>
 
     <div class="description">
-        <p>Scurta descriere</p>
+        <p class="category">Scurta descriere</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
 
-    <p>Formularul</p>
+    <p class="category">Formularul</p>
     <form id="census">
         <div>
             <label for="firstname">First Name</label>
@@ -42,7 +42,7 @@
         </div>
         <p class="errorMessage" id="mandatoryFieldsError"></p>
 
-        <p>Gender</p>
+        <p class="category">Gender</p>
         <label for="male">Male</label>
         <input type="radio" id="male" name="gender" value="Male"/>
         <label for="female">Female</label>
@@ -60,7 +60,7 @@
             <input type="number" id="phone"/>
         </div>
 
-        <p>Education Level</p>
+        <p class="category">Education Level</p>
         <label for="elementary">Elementary School</label>
         <input type="checkbox" id="elementary" name="education" value="Elementary School"/>
         <label for="primary">Primary School</label>
@@ -69,11 +69,11 @@
         <input type="checkbox" id="college" name="education" value="College"/>
 
         <div>
-            <label for="mentions">Special Mentions</label>
+            <label for="mentions" class="category">Special Mentions</label>
             <p>Here are some mentions about this subject</p>
             <textarea id="mentions" placeholder="type some text"></textarea>
         </div>
-        <button type="button" onclick='submitHandler()'>Submit</button>
+        <button type="button" class="submitButton" onclick='submitHandler()'>Submit</button>
 
     </form>
 </div>

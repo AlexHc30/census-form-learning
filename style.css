@@ -58,6 +58,22 @@ a:hover {
     color: blue;
   }
 
+  .submitButton {
+      background-color: navy;
+      color: white;
+      border: 0;
+      height: 30px;
+      width: 90px;
+      border-radius: 7px;
+  }
+
+.submitButton:hover {
+    color: navy;
+    background-color: white;
+    border: 2px solid navy;
+    cursor: pointer;
+}
+
 /* from used directly max: 769 because links at bottom and padding
 looked bad from 480 to 769 */
 @media screen and (max-width: 769px) {
