@@ -29,10 +29,15 @@
     margin: 35px 0 20px 0;
 }
 
+html, body {
+	height: 100%;
+}
+
 .bodyContent {
     padding: 0 250px;
-    margin-bottom: 50px;
     color: navy;
+    min-height: 100%;
+    margin-bottom: 50px;
 }
 
 .navigationFooter {
@@ -88,7 +93,7 @@ looked bad from 480 to 769 */
     }
     .navigationFooter{
         height: auto;
-        padding: 15px 0;
+        padding: 15px;
         display: flex;
         flex-direction: column;
     }
