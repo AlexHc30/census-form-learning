@@ -1,3 +1,25 @@
+body{ min-height:100vh; margin:0; position:relative; }
+header{ min-height:50px; background:lightcyan; }
+footer{ background:PapayaWhip; }
+
+/* Trick: */
+body {
+    position: relative;
+}
+
+body::after {
+    content: '';
+    display: block;
+    height: 50px; /* Set same as footer's height */
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+
 * {
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -17,10 +39,6 @@
     margin: 10px 0 20px 0;
 }
 
-.stema {
-    text-align: center;
-}
-
 .header {
     text-align: center;
 }
@@ -29,25 +47,19 @@
     margin: 35px 0 20px 0;
 }
 
-html, body {
-	height: 100%;
-}
-
 .bodyContent {
     padding: 0 250px;
     color: navy;
-    min-height: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 200px;
 }
 
 .navigationFooter {
-    list-style: none;
     padding: 15px 0 0 180px;
     display: flex;
     gap: 50px;
     height: 150px;
     background-color: navy;
-    box-sizing: border-box;
+    box-sizing:border-box;  /* to remove horizontal scroll bar */
 }
 
 a {
@@ -79,39 +91,52 @@ a:hover {
     cursor: pointer;
 }
 
-/* from used directly max: 769 because links at bottom and padding
-looked bad from 480 to 769 */
-@media screen and (max-width: 769px) {
-    body {
-        padding: 60px;
-    }
+.dialog {
+    height: 20vh;
+    width: 50vw;
+    padding: 60px 120px;
+    text-align: center;
+    position: absolute;
+    top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.actionButtons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 1024px) {
     .bodyContent {
-        padding: 0;
+        padding: 0 160px;
     }
     .img {
         height: 150px;
     }
+    .navigationFooter{
+        padding: 15px;
+    }
+}
+
+/* from used directly max: 769 because links at bottom and padding
+looked bad from 480 to 769 */
+@media screen and (max-width: 769px) {
+
+    .bodyContent {
+        padding: 0 60px;
+        margin-bottom: 80px;
+    }
+
+    /* when fixing links displayed in column, footer was overlaping content before it
+    fixed it with 'bottom: auto', not sure why it worked though :P */
     .navigationFooter{
         height: auto;
         padding: 15px;
         display: flex;
         flex-direction: column;
-    }
-}
-
-
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    body {
-        padding: 160px;
-    }
-    .bodyContent {
-        padding: 0;
-    }
-    .img {
-        height: 150px;
-    }
-    .navigationFooter{
-        padding: 15px;
+        justify-content: center;
+        bottom: auto;
     }
 }
