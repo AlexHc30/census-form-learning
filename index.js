@@ -47,11 +47,11 @@ function missingValues() {
   }
   if (lastNameInput.value == "") {
     lastNameInput.classList.add("errorInput");
-    emptyField += '<last name> ';
+    emptyField += '<last name> '; // '+='to fix missingValues() bug
   }
   if (cnp.value == "") {
     cnp.classList.add("errorInput");
-    emptyField += '<CNP> ';
+    emptyField += '<CNP> '; // '+='to fix missingValues() bug
   }
   let error = document.querySelector("#mandatoryFieldsError");
   if (emptyField) {
@@ -96,4 +96,19 @@ function submitHandler() {
   displaySpecialMentions();
   displayGender();
   missingValues();
+}
+
+function openDialog() {
+  event.preventDefault();
+  let dialog = document.getElementById("dialog")
+  dialog.setAttribute("open", "true");
+}
+
+function closeDialog() {
+  let dialog = document.getElementById("dialog");
+  dialog.removeAttribute("open");
+}
+
+function redirect() {
+  window.open("https://www.google.com/", "_blank")
 }
