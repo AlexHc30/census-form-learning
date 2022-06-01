@@ -9,15 +9,11 @@
 <body>
 
 <div class="bodyContent">
-    <div class="stema">
-        <img src="img/stema.png" class="stema img" alt="stema nationala a Romaniei">
-    </div>
-
-    <div class="header">
-    <h1>Recensamantul populatiei Romaniei</h1>
-    <h2>2021</h2>
-    </div>
-
+    <header class="header">
+        <img src="assets/stema.png" class="img" alt="stema nationala a Romaniei">
+        <h1>Recensamantul populatiei Romaniei</h1>
+        <h2>2021</h2>
+    </header>
     <div class="description">
         <p class="category">Scurta descriere</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -48,7 +44,7 @@
         <label for="female">Female</label>
         <input type="radio" id="female" name="gender" value="Female"/>
         <label for="other">Other</label>
-        <input type="radio" id="other" name="gender" value="Other"/>
+        <input type="radio" id="other" value="Other"/>
 
         <div>
             <label for="email">E-mail</label>
@@ -56,7 +52,7 @@
         </div>
 
         <div>
-            <label for="phone">Phone Number</label>
+            <label for="email">Phone Number</label>
             <input type="number" id="phone"/>
         </div>
 
@@ -73,18 +69,25 @@
             <p>Here are some mentions about this subject</p>
             <textarea id="mentions" placeholder="type some text"></textarea>
         </div>
-        <button type="button" class="submitButton" onclick='submitHandler()'>Submit</button>
+        <button type="button" class="submitButton" onclick='submitHandler()'>Submit</button> 
+        <!-- button type 'button' instead of 'submit' to fix bug -->
 
     </form>
+    <dialog class="dialog" id="dialog">
+        <p>Are you sure?</p>
+        <div class="actionButtons">
+            <button id="yes" onclick="redirect(); closeDialog()">Yes</button>
+            <button id="no" onclick="closeDialog()">No</button>
+        </div>
+    </dialog>
 </div>
 
-<ul class="navigationFooter">
-        <li><a href="https://www.google.com/" target="_blank">FAQ</a></li>
-        <li><a href="https://www.google.com/" target="_blank">Contact</a></li>
-        <li><a href="https://www.google.com/" target="_blank">Official Website</a></li>
-        <li><a href="https://www.google.com/" target="_blank">Site Map</a></li>
-</ul>
-
+<footer class="navigationFooter">
+    <a href="https://www.google.com/" target="_blank" onclick="openDialog()">FAQ</a>
+    <a href="https://www.google.com/" target="_blank" onclick="openDialog()">Contact</a>
+    <a href="https://www.google.com/" target="_blank" onclick="openDialog()">Official Website</a>
+    <a href="https://www.google.com/" target="_blank" onclick="openDialog()">Site Map</a>
+</footer>
 
 <script src="index.js"></script>
 </body>
