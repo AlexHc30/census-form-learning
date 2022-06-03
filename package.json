@@ -1,0 +1,25 @@
+{
+  "name": "census-form-learning",
+  "version": "1.0.0",
+  "description": "census form project that I created while learning HTML forms and fundamentals of Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexHc30/census-form-learning.git"
+  },
+  "keywords": [
+    "census",
+    "HTML-forms",
+    "learning",
+    "JS"
+  ],
+  "author": "alex.h <alex.haiduc01@gmail.com> (https://alexhc30.github.io/census-form-learning/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexHc30/census-form-learning/issues"
+  },
+  "homepage": "https://github.com/AlexHc30/census-form-learning#readme"
+}
