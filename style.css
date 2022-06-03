@@ -1,5 +1,5 @@
 body{ min-height:100vh; margin:0; position:relative; }
-header{ min-height:50px; background:lightcyan; }
+header{ min-height:50px; }
 footer{ background:PapayaWhip; }
 
 /* Trick: */
