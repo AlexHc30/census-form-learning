@@ -1,7 +1,4 @@
 let nameInput = document.querySelector("#firstname");
-function displayName() {
-
-}
 
 function displayGender() {
   let genders = document.getElementsByName("gender");
