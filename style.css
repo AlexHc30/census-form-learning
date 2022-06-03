@@ -1,5 +1,5 @@
 body{ min-height:100vh; margin:0; position:relative; }
-header{ min-height:50px; }
+header{ min-height:50px; background-color: white;}
 footer{ background:PapayaWhip; }
 
 /* Trick: */
@@ -140,3 +140,4 @@ looked bad from 480 to 769 */
         bottom: auto;
     }
 }
+
