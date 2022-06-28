@@ -1,9 +1,5 @@
 let nameInput = document.querySelector("#firstname");
 
-import { get_hms } from '@time-zone/date'
-let hms = get_hms('Asia/Shanghai')
-console.log(hms);
-
 function displayGender() {
   let genders = document.getElementsByName("gender");
 

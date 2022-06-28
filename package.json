@@ -21,8 +21,5 @@
   "bugs": {
     "url": "https://github.com/AlexHc30/census-form-learning/issues"
   },
-  "homepage": "https://github.com/AlexHc30/census-form-learning#readme",
-  "dependencies": {
-    "@time-zone/date": "^2.2.2"
-  }
+  "homepage": "https://github.com/AlexHc30/census-form-learning#readme"
 }
