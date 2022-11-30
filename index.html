@@ -1,94 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Recensamant</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 
-<div class="bodyContent">
-    <header class="header">
-        <img src="assets/stema.png" class="img" alt="stema nationala a Romaniei">
-        <h1>Recensamantul populatiei Romaniei</h1>
-        <h2>2021</h2>
-    </header>
-    <div class="description">
-        <p class="category">Scurta descriere</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div class="bodyContent">
+        <header class="header">
+            <img src="assets/stema.png" class="img" alt="stema nationala a Romaniei">
+            <h1>RECENSAMANTUL POPULATIEI ROMANIEI</h1>
+            <h1>2021</h1>
+        </header>
+
+        <main>
+            <div class="description">
+                <p class="category">Description</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+            </div>
+
+            <p class="category">Form</p>
+            <form id="census">
+                <div>
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" onchange="invalidNames(nameInput)" />
+                    <p class="errorMessage" id="firstNameError"></p>
+                </div>
+                <div>
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" onchange="invalidNames(lastNameInput)" />
+                    <p class="errorMessage" id="lastNameError"></p>
+                </div>
+                <div>
+                    <label for="cnp">CNP</label>
+                    <input type="number" id="cnp" />
+                </div>
+                <p class="errorMessage" id="mandatoryFieldsError"></p>
+
+                <p class="category">Gender</p>
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender" value="Male" />
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="Female" />
+                <label for="other">Other</label>
+                <input type="radio" id="other" value="Other" />
+
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" />
+                </div>
+
+                <div>
+                    <label for="email">Phone Number</label>
+                    <input type="number" id="phone" />
+                </div>
+
+                <p class="category">Education Level</p>
+                <label for="elementary">Elementary School</label>
+                <input type="checkbox" id="elementary" name="education" value="Elementary School" />
+                <label for="primary">Primary School</label>
+                <input type="checkbox" id="primary" name="education" value="Primary School" />
+                <label for="college">College</label>
+                <input type="checkbox" id="college" name="education" value="College" />
+
+                <div class="category">
+                    <label for="mentions">Special Mentions</label>
+                    <p>Here are some mentions about this subject</p>
+                    <textarea id="mentions" placeholder="type some text"></textarea>
+                </div>
+                <button type="button" class="submitButton" onclick='submitHandler()'>Submit</button>
+                <!-- button type 'button' instead of 'submit' to fix bug -->
+
+            </form>
+            <dialog class="dialog" id="dialog">
+                <p>Are you sure you want to visit this website?</p>
+                <div class="actionButtons">
+                    <button id="yes" onclick="redirect(); closeDialog()">Yes</button>
+                    <button id="no" onclick="closeDialog()">No</button>
+                </div>
+            </dialog>
+        
+        </main>
     </div>
+    
+    <footer class="navigationFooter">
+        <a href="https://www.google.com/" target="_blank" onclick="openDialog()">FAQ</a>
+        <a href="https://www.google.com/" target="_blank" onclick="openDialog()">Contact</a>
+        <a href="https://www.google.com/" target="_blank" onclick="openDialog()">Official Website</a>
+        <a href="https://www.google.com/" target="_blank" onclick="openDialog()">Site Map</a>
+    </footer>
 
-    <p class="category">Formularul</p>
-    <form id="census">
-        <div>
-            <label for="firstname">First Name</label>
-            <input type="text" id="firstname" onchange="invalidNames(nameInput)"/>
-            <p class="errorMessage" id="firstNameError"></p>
-        </div>
-        <div>
-            <label for="lastname">Last Name</label>
-            <input type="text" id="lastname" onchange="invalidNames(lastNameInput)"/>
-            <p class="errorMessage" id="lastNameError"></p>
-        </div>
-        <div>
-            <label for="cnp">CNP</label>
-            <input type="number" id="cnp"/>
-        </div>
-        <p class="errorMessage" id="mandatoryFieldsError"></p>
-
-        <p class="category">Gender</p>
-        <label for="male">Male</label>
-        <input type="radio" id="male" name="gender" value="Male"/>
-        <label for="female">Female</label>
-        <input type="radio" id="female" name="gender" value="Female"/>
-        <label for="other">Other</label>
-        <input type="radio" id="other" value="Other"/>
-
-        <div>
-            <label for="email">E-mail</label>
-            <input type="email" id="email"/>
-        </div>
-
-        <div>
-            <label for="email">Phone Number</label>
-            <input type="number" id="phone"/>
-        </div>
-
-        <p class="category">Education Level</p>
-        <label for="elementary">Elementary School</label>
-        <input type="checkbox" id="elementary" name="education" value="Elementary School"/>
-        <label for="primary">Primary School</label>
-        <input type="checkbox" id="primary" name="education" value="Primary School"/>
-        <label for="college">College</label>
-        <input type="checkbox" id="college" name="education" value="College"/>
-
-        <div>
-            <label for="mentions"  class="category">Special Mentions</label>
-            <p>Here are some mentions about this subject</p>
-            <textarea id="mentions" placeholder="type some text"></textarea>
-        </div>
-        <button type="button" class="submitButton" onclick='submitHandler()'>Submit</button> 
-        <!-- button type 'button' instead of 'submit' to fix bug -->
-
-    </form>
-    <dialog class="dialog" id="dialog">
-        <p>Are you sure?</p>
-        <div class="actionButtons">
-            <button id="yes" onclick="redirect(); closeDialog()">Yes</button>
-            <button id="no" onclick="closeDialog()">No</button>
-        </div>
-    </dialog>
-</div>
-
-<footer class="navigationFooter">
-    <a href="https://www.google.com/" target="_blank" onclick="openDialog()">FAQ</a>
-    <a href="https://www.google.com/" target="_blank" onclick="openDialog()">Contact</a>
-    <a href="https://www.google.com/" target="_blank" onclick="openDialog()">Official Website</a>
-    <a href="https://www.google.com/" target="_blank" onclick="openDialog()">Site Map</a>
-</footer>
-
-<script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>
