@@ -7,7 +7,7 @@ It consists of several exercises, such as:<br>
 	* if the first or last name fields contain numbers (onchange)<br>
 * displaying in console after submitting:
 	* gender and education level, if they are filled in.
-	* special mentions value, only if length > 50 characters <br>.
+	* special mentions value, only if length > 50 characters. <br>
 
 
 Live [Demo](https://alexhc30.github.io/census-form-learning/).
